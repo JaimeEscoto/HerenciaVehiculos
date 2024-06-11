@@ -1,0 +1,5 @@
+vehiculos\Camion.class
+vehiculos\Bicicleta.class
+com\mycompany\herenciavehiculos\Herenciavehiculos.class
+vehiculos\Moto.class
+vehiculos\Vehiculo.class
