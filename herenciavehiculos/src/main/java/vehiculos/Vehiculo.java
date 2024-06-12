@@ -10,14 +10,29 @@ package vehiculos;
  */
 public class Vehiculo {
     protected int numLlantas; // Atributo protegido, accesible desde las clases hijas
-
+    
+    // Constructor de la clase Vehiculo
+    public Vehiculo() {
+        this.numLlantas = -1;
+    }
+    
     // Constructor de la clase Vehiculo
     public Vehiculo(int numLlantas) {
-        this.numLlantas = numLlantas;
+        if(numLlantas<0){
+            this.numLlantas = -1;
+        }
+        else{
+            this.numLlantas = numLlantas;
+        }
     }
 
     // Método para mostrar información del vehículo
     public void mostrarInfo() {
-        System.out.println("Número de llantas: " + numLlantas);
+        if(numLlantas<0){
+           System.out.println("Vehiculo con problema de llantas"); 
+        }
+        else{
+            System.out.println("Número de llantas: " + numLlantas);
+        }
     }
 }

@@ -14,7 +14,12 @@ public class Moto extends Vehiculo {
     // Constructor de la clase Moto
     public Moto(int numLlantas, int cilindrada) {
         super(numLlantas); // Llama al constructor de la clase padre (Vehiculo)
+        if(cilindrada>1000 && cilindrada <5000)
+        {
+        }
         this.cilindrada = cilindrada;
+        
+        //Validar que la cilindrada este entre 1000 - 5000, de lo contrario, asignar -1.
     }
 
     // Sobreescribimos el método mostrarInfo para agregar información específica de la moto
