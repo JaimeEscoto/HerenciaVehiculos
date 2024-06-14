@@ -12,15 +12,26 @@ public class Camion extends Vehiculo {
     private int capacidadCarga;
 
     // Constructor de la clase Camion
-    public Camion(int numLlantas, int capacidadCarga) {
+    public Camion(int numLlantas, int capacidadC) {
         super(numLlantas);
-        this.capacidadCarga = capacidadCarga;
+        if(capacidadC>=0){
+            capacidadCarga = capacidadC;    
+        }
+        else{
+            capacidadCarga = -1;
+        }
     }
 
     // Sobreescribimos el método mostrarInfo para agregar información específica del camión
     @Override
     public void mostrarInfo() {
         super.mostrarInfo();
-        System.out.println("Capacidad de carga: " + capacidadCarga + " toneladas");
+        if(capacidadCarga==-1){
+            System.out.println("Camion con problema de capacidad de carga"); 
+        }
+        else{
+            System.out.println("Capacidad de carga: " + capacidadCarga + " toneladas"); 
+        }
+            
     }
 }

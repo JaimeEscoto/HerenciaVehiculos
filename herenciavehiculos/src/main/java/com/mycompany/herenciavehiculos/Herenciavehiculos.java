@@ -13,16 +13,12 @@ import vehiculos.*;
 public class Herenciavehiculos {
 
     public static void main(String[] args) {
+        Moto v = new Moto(2,3000);
+        //v.mostrarInfo();
         
-        Vehiculo mivehiculo = new Vehiculo(-100);
-        
-        Moto miMoto = new Moto(2, 1000);
-        Camion miCamion = new Camion(18, 20);
-        Bicicleta miBici = new Bicicleta(2, "Montaña");
-
-        mostrarInfo(miMoto);
-        miCamion.mostrarInfo();
-        miBici.mostrarInfo();
+        Camion c = new Camion(-5,3000);
+        c.mostrarInfo();
+       
     }
     public static void mostrarInfo(Vehiculo v)
     {
